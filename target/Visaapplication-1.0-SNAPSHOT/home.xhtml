@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f7f6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+
+            h1 {
+                text-align: center;
+                color: #007bff;
+                margin-bottom: 30px;
+                font-size: 2.5em;
+                font-weight: bold;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .button-container h:commandButton,
+            .button-container h:commandLink {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+                font-size: 16px;
+                text-decoration: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }
+
+            .button-container h:commandButton:hover,
+            .button-container h:commandLink:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+            }
+
+            .footer {
+                text-align: center;
+                margin-top: 50px;
+                color: #777;
+                font-size: 14px;
+                padding: 20px;
+                background-color: #f4f7f6;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            @media (max-width: 768px) {
+                .button-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .button-container h:commandButton,
+                .button-container h:commandLink {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>Hello from Facelets</h1>
+
+        <div class="button-container">
+            <h:form>
+                <h:commandButton value="Index" action="index" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="À propos" action="a_propos" />
+            </h:form>
+            <h:form>
+                <h:commandLink value="Lieu" action="lieu" />
+            </h:form>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Votre DELL</p>
+        </div>
+    </h:body>
+</html>
